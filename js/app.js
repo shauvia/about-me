@@ -20,6 +20,8 @@ var count = 0;
 var uName = prompt('Hello, what is your name?');
 console.log(uName);
 
+// dodać coś w stylu, czy chcesz zagrać za mną w gre? Tak - fajnie! nie? - Dziękuje za wizytę na stronie
+
 var firstQ = prompt('Was I born in Torun?');
 
 firstQ = firstQ.toLowerCase();
@@ -28,7 +30,7 @@ if (firstQ === 'yes' || firstQ === 'y'){
   alert(uName + ", that's correct!");
   count = count+1;
 } else {
-  alert('Wrong anwser!');
+  alert('Wrong anwser!'); //dodać zcoś w stylu idżmy do nasteonego pytania
 }
 console.log("User's anwser to first question");
 
@@ -111,11 +113,11 @@ var x = 0;
 var userAnswer = prompt('Where have I lived?');
 userAnswer.toLowerCase();
 
-while (x < 6) {
-  console.log('Guessing ' + x);
-  for (var i = 0; i < cities.length; i++) {
-    console.log('Cheking ' + i);
-    if (userAnswer === cities[i].toLowerCase()){
+while (x < 6) { //gives user 6 chances to guess
+  console.log('Guessing ' + x); 
+  for (var y = 0; y < cities.length; y++) { //compares user's answer against the array
+    console.log('Cheking ' + y); 
+    if (userAnswer === cities[y].toLowerCase()){
       var correctAnswer = true;
       count = count + 1;
       alert("You got it right. I've lived in " + cities[0] + ', ' + cities[1] + ' and ' + cities[2] + '.');
