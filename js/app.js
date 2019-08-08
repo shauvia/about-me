@@ -5,70 +5,132 @@
 // function changingToLowerCase (question){
 //   question = question.toLowerCase();
 
-//   if (question === "yes" || question === "y"){
+//   if (question === 'yes' || question === 'y'){
 //     alert(uName + " that's awsome!");
 //   } else {
 //     alert("That's sad!");
 //   }
 //  }
 
-//My answers:
-//1. I was able to make it work, but I need to work on CSS.
-//2. I tried to create a function above, bu got message "Parsing erorr: unexpected token eslint". TA's weren't able to help me 
+// My answers:
+// 1. I was able to make it work, but I need to work on CSS.
+// 2. I tried to create a function above, bu got message "Parsing erorr: unexpected token eslint". TA's weren't able to help me
 
-
-var uName = prompt("What is your name?");
+var count = 0;
+var uName = prompt('Hello, what is your name?');
 console.log(uName);
 
-var firstQ = prompt( uName + ', have you heard that Torun is a gingerbread city?');
+var firstQ = prompt('Was I born in Torun?');
 
 firstQ = firstQ.toLowerCase();
 
-if (firstQ === "yes" || firstQ === "y"){
-  alert(uName + ", that's awsome!");
+if (firstQ === 'yes' || firstQ === 'y'){
+  alert(uName + ", that's correct!");
+  count = count+1;
 } else {
-  alert("That's sad!");
+  alert('Wrong anwser!');
 }
 console.log("User's anwser to first question");
 
-var secondQ = prompt(uName + ', have you ever eaten a gingerbread?');
+var secondQ = prompt(uName + ', have I ever eaten a gingerbread?');
 
 secondQ = secondQ.toLowerCase();
 
-if (secondQ === "yes" || secondQ === "y"){
-  alert(uName + ", that's awsome!");
+if (secondQ === 'yes' || secondQ === 'y'){
+  alert(uName + ", that's correct!");
+  count = count+1;
 } else {
-  alert("That's sad!");
+  alert('Wrong anwser!');
 }
 console.log("User's anwser to second question");
 
-var thirdQ = prompt(uName + ', did you know Copernicus?');
+var thirdQ = prompt(uName + ', did I know Copernicus?');
 thirdQ = thirdQ.toLowerCase();
 
-if (thirdQ === "yes" || thirdQ === "y"){
-  alert(uName + ", that's awsome!");
+if (thirdQ === 'yes' || thirdQ === 'y'){
+  alert(uName + ", that's correct!");
+  count = count+1;
 } else {
-  alert("That's sad!");
+  alert('Wrong anwser!');
 }
 console.log("User's anwser to third question");
 
-var fourthQ = prompt(uName + ', did you know that Earth is not a center of universe?');
+var fourthQ = prompt(uName + ', did I studied in Warsaw?');
 fourthQ = fourthQ.toLowerCase();
 
-if (fourthQ === "yes" || fourthQ === "y"){
-  alert(uName + ", that's awsome!");
+if (fourthQ === 'yes' || fourthQ === 'y'){
+  alert(uName + ", that's correct!");
+  count = count+1;
 } else {
-  alert("That's sad!");
+  alert('Wrong anwser!');
 }
 console.log("User's anwser to third question");
 
-var fifthQ = prompt(uName + ', did you know that Copernicus was a fun of gingerbreads?');
+var fifthQ = prompt('Am I from Poland?');
 
 fifthQ = fifthQ.toLowerCase();
 
-if (fifthQ === "yes" || fifthQ === "y"){
-  alert(uName + ", that's awsome!");
+if (fifthQ === 'yes' || fifthQ === 'y'){
+  alert(uName + ", that's correct!");
+  count = count+1;
 } else {
-  alert("That's sad!");
+  alert('Wrong anwser!');
 }
 console.log("User's anwser to fifth question"); 
+
+// Asking user for numeric input 4 times.
+
+
+var wasCorrectAnswer = false; 
+
+for ( var i = 0; i < 4; i++) {
+  var uAnswer = parseInt(prompt('How many countries have I visited?'));
+  console.log('Number of tries ' + i);
+  if (uAnswer === 12) {
+    alert('Congratulation! You got it!');
+    wasCorrectAnswer = true;
+    console.log('Correct answer');
+    count = count+1;
+    break;
+  } else if (uAnswer > 12) {
+    alert("It's too high. Try again!");
+    console.log('Number too high ' + uAnswer);
+  } else if (uAnswer < 12) {
+    alert("It's too low. Try again!");
+    console.log('Number too low ' + uAnswer);
+  }
+}
+if (wasCorrectAnswer === false) {
+  alert('You have used all you chances.');
+}
+
+var cities = ["Bellevue", "Torun", "Spokane"];
+var correctAnswer = false;
+
+var x = 0;
+var userAnswer = prompt('Where have I lived?');
+userAnswer.toLowerCase();
+
+while (x < 6) {
+  console.log('Guessing ' + x);
+  for (var i = 0; i < cities.length; i++) {
+    console.log('Cheking ' + i);
+    if (userAnswer === cities[i].toLowerCase()){
+      var correctAnswer = true;
+      count = count + 1;
+      alert("You got it right. I've lived in " + cities[0] + ', ' + cities[1] + ' and ' + cities[2] + '.');
+      console.log('User got answer right');
+      break;
+    }
+  }
+  if (correctAnswer) {
+    break;
+  } else {
+    userAnswer = prompt('Where have I lived?');
+    userAnswer.toLowerCase();
+    x = x+1;
+  }
+}
+
+alert('You got ' + count + ' out of 7 questions ' + uName);
+

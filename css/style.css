@@ -2,10 +2,13 @@
 body{
   background-color: rgb(236, 202, 129);
   font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  
   
 }
 header {
   background-color:rgb(240, 195, 112);
+  border-radius: 20px;
   color:brown;
   font-size: 3em;
   border: 1px solid rgb(199, 114, 17);
@@ -18,30 +21,48 @@ header {
 }
 
 article{
+  box-shadow: 0 0 10px rgb(199, 114, 17);
   text-align: left;
   background-color: rgb(238, 187, 124);
   width: 200px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 45px;
+  padding-right: 45px;
   padding-bottom: 25px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  display: block; 
+  box-sizing: border-box; 
+  width: 50%;
+  
   
 }
 
 h2{
+  border-bottom: 1px solid rgb(230, 145, 48);
   font-size: 120%;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 10px;
   text-transform: uppercase;
-  border-bottom: 1px solid rgb(230, 145, 48);
+  
   
 }
 
 p{
   word-spacing: 0.1em;
   line-height: 1.2em;
+}
+
+ol {
+  line-height: 1.3em;
+  list-style-type: decimal;
+  word-spacing: 0.1em;
+  
+  
+}
+
+ul {
+  list-style: disc;
+  line-height: 1.3em;
+  word-spacing: 0.1em;
 }
