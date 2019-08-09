@@ -13,3 +13,7 @@ v2 changed features:
 - improved css styling
 
 updated Wednesday 8/7
+
+08/08 updates:
+- new functions
+- Ewa the Navigator and Steve the Driver 
