@@ -21,7 +21,6 @@ else {
   alert('That\'s sad. Thanks for visiting my website');
 }
 
-
 function askfiveYnQuestions() {
 // dodać coś w stylu, czy chcesz zagrać za mną w gre? Tak - fajnie! nie? - Dziękuje za wizytę na stronie
 
@@ -105,7 +104,7 @@ function guessCities() {
   }
 }
 
-askfiveYnQuestions()
+askfiveYnQuestions();
 numberOfCountries();
 guessCities();
 
