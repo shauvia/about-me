@@ -1,84 +1,48 @@
 'use strict';
 
+function tFQuestions(answer){
+  answer = answer.toLowerCase();
 
-
-// function changingToLowerCase (question){
-//   question = question.toLowerCase();
-
-//   if (question === 'yes' || question === 'y'){
-//     alert(uName + " that's awsome!");
-//   } else {
-//     alert("That's sad!");
-//   }
-//  }
-
-// My answers:
-// 1. I was able to make it work, but I need to work on CSS.
-// 2. I tried to create a function above, bu got message "Parsing erorr: unexpected token eslint". TA's weren't able to help me
+  if (answer === 'yes' || answer === 'y'){
+    alert(uName + ', that\'s correct! Let\'s go to next question.');
+    count = count+1;
+  } else {
+    alert('That\'s a wrong anwser! Let\'s go to next question.'); //dodać coś w stylu idżmy do nasteonego pytania
+  }
+}
 
 var count = 0;
 var uName = prompt('Hello, what is your name?');
 console.log(uName);
 
-function tFQuestions() {
+if (confirm( uName + ' Would you like to play a guessing game?')) {
+  alert('Let\'s play');}
+else {
+  alert('That\'s sad. Thanks for visiting my website');
+}
+
+
+function askfiveYnQuestions() {
 // dodać coś w stylu, czy chcesz zagrać za mną w gre? Tak - fajnie! nie? - Dziękuje za wizytę na stronie
 
   var firstQ = prompt('Was I born in Torun?');
-
-  firstQ = firstQ.toLowerCase();
-
-  if (firstQ === 'yes' || firstQ === 'y'){
-    alert(uName + ', that\'s correct!');
-    count = count+1;
-  } else {
-    alert('Wrong anwser!'); //dodać zcoś w stylu idżmy do nasteonego pytania
-  }
+  tFQuestions(firstQ);
   console.log('User\'s anwser to first question');
 
   var secondQ = prompt(uName + ', have I ever eaten a gingerbread?');
-
-  secondQ = secondQ.toLowerCase();
-
-  if (secondQ === 'yes' || secondQ === 'y'){
-    alert(uName + ', that\'s correct!');
-    count = count+1;
-  } else {
-    alert('Wrong anwser!');
-  }
+  tFQuestions(secondQ);
   console.log('User\'s anwser to second question');
 
   var thirdQ = prompt(uName + ', did I know Copernicus?');
-  thirdQ = thirdQ.toLowerCase();
-
-  if (thirdQ === 'yes' || thirdQ === 'y'){
-    alert(uName + ', that\'s correct!');
-    count = count+1;
-  } else {
-    alert('Wrong anwser!');
-  }
+  tFQuestions(thirdQ);
   console.log('User\'s anwser to third question');
 
   var fourthQ = prompt(uName + ', did I studied in Warsaw?');
-  fourthQ = fourthQ.toLowerCase();
-
-  if (fourthQ === 'yes' || fourthQ === 'y'){
-    alert(uName + ', that\'s correct!');
-    count = count+1;
-  } else {
-    alert('Wrong anwser!');
-  }
-  console.log('User\'s anwser to third question');
+  tFQuestions(fourthQ);
+  console.log('User\'s anwser to fourth question');
 
   var fifthQ = prompt('Am I from Poland?');
-
-  fifthQ = fifthQ.toLowerCase();
-
-  if (fifthQ === 'yes' || fifthQ === 'y'){
-    alert(uName + ', that\'s correct!');
-    count = count+1;
-  } else {
-    alert('Wrong anwser!');
-  }
+  tFQuestions(fifthQ);
   console.log('User\'s anwser to fifth question');
 }
 
@@ -141,7 +105,7 @@ function guessCities() {
   }
 }
 
-tFQuestions();
+askfiveYnQuestions()
 numberOfCountries();
 guessCities();
 
