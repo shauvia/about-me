@@ -32,7 +32,7 @@ function askfiveYnQuestions() {
   tFQuestions(secondQ);
   console.log('User\'s anwser to second question');
 
-  var thirdQ = prompt(uName + ', did I know Copernicus?');
+  var thirdQ = prompt(uName + ', do I know Copernicus? ;)');
   tFQuestions(thirdQ);
   console.log('User\'s anwser to third question');
 
@@ -75,11 +75,11 @@ function numberOfCountries() {
 
 
 function guessCities() {
-  var cities = ['Bellevue', 'Torun', 'Spokane'];
+  var cities = ['Bellevue', 'Torun', 'Kirkland'];
   var correctAnswer = false;
 
   var x = 0;
-  var userAnswer = prompt('Where have I lived?');
+  var userAnswer = prompt('Try to guess where I have lived? You have 6 chances.');
   while (x < 6) { //gives user 6 chances to guess
     console.log('Guessing ' + x);
     userAnswer = userAnswer.toLowerCase();
@@ -97,7 +97,7 @@ function guessCities() {
     if (correctAnswer) {
       break;
     } else {
-      userAnswer = prompt('Where have I lived?');
+      userAnswer = prompt('That\'wrong answer. Try again. Where have I lived?');
       userAnswer.toLowerCase();
       x = x+1;
     }
